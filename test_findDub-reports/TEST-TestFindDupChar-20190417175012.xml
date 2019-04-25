@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="TestFindDupChar-20190417175012" tests="3" time="0.000">
+	<testcase classname="TestFindDupChar" name="testOneDuplicate" time="0.000"/>
+	<testcase classname="TestFindDupChar" name="test_first_none_repeated_char" time="0.000"/>
+	<testcase classname="TestFindDupChar" name="test_is_agnagram" time="0.000"/>
+	<system-out>
+<![CDATA[Damn....you've got type error
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

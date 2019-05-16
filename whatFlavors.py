@@ -15,14 +15,13 @@ def whatFlavors(cost, money):
 
         if complement in sorted_cost[i+1:]:
             print('found one')
-            get_right_index(i, complement, cost)
-
+            nextitem = [k for k, v in costdic.items() if v == complement]
 
 def get_right_index(item1, comp, arr):
      index1 = arr.index(comp)
 
 if __name__ == '__main__':
     menu = [2, 7, 13, 5, 4, 13, 5]
-    money = 10
+    money = 9
 
     whatFlavors(menu, money)

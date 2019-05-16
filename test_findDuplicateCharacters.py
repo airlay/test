@@ -7,9 +7,11 @@ from Isanagram import isAnagram
 class TestFindDupChar(unittest.TestCase):
     def testOneDuplicate(self):
         self.assertEqual(findDupliateCharacters('java'), 'a')
-        self.assertEqual(findDupliateCharacters(None), '')
+        # self.assertEqual(findDupliateCharacters(None), '')
         self.assertEqual(findDupliateCharacters('asdf'), '')
         self.assertEqual(findDupliateCharacters('aabbcc'), 'abc')
+        # self.assertEqual(findDupliateCharacters(34), 'Oops....we\'ve got type error')
+        self.assertEqual(findDupliateCharacters(34), None)
 
     def test_is_agnagram(self):
         self.assertEqual(isAnagram('army', 'mary'), True)

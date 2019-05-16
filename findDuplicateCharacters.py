@@ -6,23 +6,23 @@ def findDupliateCharacters(inputstring):
     # solution put the characters in dictionary, and add the value if there is duplicate
 
     result = {}
-    resultstring =''
+    resultstring = ''
     try:
         for i in inputstring:
             if i not in result:
                 result[i] = 1
             else:
-                result[i] = result[i]+1
+                result[i] = result[i] + 1
         # print(result)
-        for k,val in result.items():
+        for k, val in result.items():
             if val > 1:
                 resultstring = resultstring + k
 
+        return resultstring
     except TypeError:
-        print('Damn....you\'ve got type error')
+        print('Oops....we\'ve got type error')
 
     # print(resultstring)
-    return resultstring
 
 
 def find_none_duplicate_char(inputsting):
@@ -32,9 +32,9 @@ def find_none_duplicate_char(inputsting):
             if i not in result:
                 result[i] = 1
             else:
-                result[i] = result[i]+1
+                result[i] = result[i] + 1
 
-        for k,val in result.items():
+        for k, val in result.items():
             if val == 1:
                 return k
 
@@ -45,10 +45,8 @@ def find_none_duplicate_char(inputsting):
 
 
 # if __name__ == '__main__':
-#     # r = findDupliateCharacters('java')
-#     # s = findDupliateCharacters('aabbcc')
-#
-#     a = find_none_duplicate_char('java')
-#     print(a)
-
-
+#     r = findDupliateCharacters(45)
+    #     # s = findDupliateCharacters('aabbcc')
+    #
+    #     a = find_none_duplicate_char('java')
+    # print(r)

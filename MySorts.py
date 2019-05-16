@@ -95,5 +95,62 @@ def sorted_binary_search(list, value):
         return False
 
 
-m = [2, 6, 11, 19, 27, 31, 45, 121]
-print(sorted_binary_search(m, 2))
+def quick_sort(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+
+        quick_sort(arr, low, pi-1)
+        quick_sort(arr, pi+1, high)
+
+
+
+
+def partition(arr, start, end):
+    pivot = arr[end]
+    partionIndex = start
+    temp = 0
+
+    for i in range(start, end):
+        if arr[i] <= pivot:
+            # swap arr[i] with arr[partionIndex]
+            temp =arr[i]
+            arr[i] = arr[partionIndex]
+            arr[partionIndex] = temp
+            partionIndex += 1
+
+    # swarp arr[partitionIndex] with pivot
+    temp = arr[end]
+    arr[end] = arr[partionIndex]
+    arr[partionIndex] = temp
+
+    print('arr :{}'.format(arr))
+    return partionIndex
+
+
+
+def quicksort1(arr, start, end):
+    pass
+
+def partition1(arr, start, end):
+    pivot = arr[end]
+    pivotIndex = start
+    temp =0
+
+    for i in range(start, end):
+        if arr[i] <= pivot:
+            # swap
+            arr[i] = temp
+            arr[i] = arr[pivotIndex]
+            arr[pivotIndex] = temp
+
+
+
+
+
+if __name__ == '__main__':
+    m = [7,2,1,6,8,5,3,4]
+    # print(sorted_binary_search(m, 2))
+
+    quick_sort(m, 0, len(m)-1)
+
+    print(m)
